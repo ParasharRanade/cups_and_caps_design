@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cups & Caps Design | Bespoke Drinkware & Custom Headwear Studio</title>
+  <meta name="description" content="Custom ceramic mugs, insulated travel tumblers, vintage dad hats, and 3D puff trucker caps. Live 3D design studio, realistic embroidery proofing, and instant bulk volume quotes in a sunlit light theme.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span class="tag">☀️ LIGHT THEME FLAGSHIP</span>
+    <span>Turning Everyday Moments into Timeless Keepsakes. ☕🧢 • Free Shipping across India on orders above ₹999 with code <a href="#cart" class="promo-link" id="promoCodeLink">LIGHT15</a></span>
+  </div>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand-logo">
+        <img src="assets/logo.png" alt="Cups & Caps Logo">
+        <div class="brand-text">
+          <div class="brand-title">Cups & Caps <span>Design</span></div>
+          <div class="brand-subtitle">Turning Everyday Moments into Timeless Keepsakes. ☕🧢</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#catalog" class="nav-link active">Catalog</a></li>
+          <li><a href="#studio" class="nav-link open-studio-trigger" data-product="dad-hat">3D Live Studio <span class="nav-badge-pill">Interactive</span></a></li>
+          <li><a href="#calculator" class="nav-link">Bulk Calculator</a></li>
+          <li><a href="#templates" class="nav-link">Templates & Lookbook</a></li>
+          <li><a href="#sample-kit" class="nav-link">Sample Kit</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary open-studio-trigger" data-product="dad-hat">
+          ✨ Open Studio
+        </button>
+        <button class="cart-btn" id="cartToggleBtn" aria-label="Shopping Cart">
+          🛒
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Warm, Sunlit Light Theme) -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <div class="hero-pill-badge">
+          <span class="dot"></span>
+          <span>Turning Everyday Moments into Timeless Keepsakes. ☕🧢</span>
+        </div>
+        <h1 class="hero-title">
+          Custom Cups & Caps, <br>
+          <span class="serif-accent">Crafted with Distinction.</span>
+        </h1>
+        <p class="hero-desc">
+          Specializing exclusively in the two highest-impact branded lifestyle essentials. From kiln-glazed ceramic mugs and laser-etched tumblers to vintage washed dad hats and 3D puff embroidery snapbacks.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-lg open-studio-trigger" data-product="dad-hat">
+            🎨 Launch 3D Live Studio
+          </button>
+          <a href="#calculator" class="btn btn-secondary btn-lg">
+            📊 Calculate Instant Quote
+          </a>
+        </div>
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <div class="stat-num">100K+</div>
+            <div class="stat-label">Units Delivered</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num">3D Puff</div>
+            <div class="stat-label">Tajima Embroidery</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="stat-num">4.95 ★</div>
+            <div class="stat-label">2,400+ Cafe & Brand Reviews</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Showcase Mockup Card -->
+      <div class="hero-showcase-card">
+        <div class="showcase-header">
+          <div class="showcase-title">
+            <span>✨ Live Studio Proof</span>
+          </div>
+          <div class="showcase-tabs">
+            <button class="showcase-tab-btn active" data-product="dad-hat" data-color="#E05A36">Dad Hat</button>
+            <button class="showcase-tab-btn" data-product="ceramic-mug" data-color="#FFFFFF">Ceramic Mug</button>
+            <button class="showcase-tab-btn" data-product="steel-tumbler" data-color="#1E293B">Tumbler</button>
+            <button class="showcase-tab-btn" data-product="trucker-cap" data-color="#FAF8F5">Trucker</button>
+            <button class="showcase-tab-btn" data-product="knit-beanie" data-color="#334155">Beanie</button>
+          </div>
+        </div>
+        <div class="showcase-canvas-area">
+          <canvas id="heroCanvas" width="480" height="320"></canvas>
+        </div>
+        <div class="showcase-footer">
+          <div class="showcase-meta">
+            <span class="spec-chip">300 DPI Preflight</span>
+            <span class="spec-chip">Dishwasher / Wash Tested</span>
+          </div>
+          <button class="btn btn-sm btn-outline open-studio-trigger" data-product="dad-hat">
+            Customize This →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog Grid Section -->
+  <section id="catalog" class="section-wrapper">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">OUR CURATED COLLECTION</span>
+        <h2 class="section-heading">Engineered for Daily Rituals & Streetwear</h2>
+        <p class="section-desc">Choose from handcrafted drinkware or retail-grade headwear tailored with custom embroidery, laser engraving, and ceramic glazes.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-pill active" data-filter="all">All Products</button>
+        <button class="filter-pill" data-filter="drinkware">☕ Drinkware & Cups</button>
+        <button class="filter-pill" data-filter="headwear">🧢 Caps & Headwear</button>
+        <button class="filter-pill" data-filter="bestseller">🔥 Best Sellers</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- 1. Ceramic Mug -->
+        <div class="product-card" data-category="drinkware">
+          <div class="product-thumb">
+            <span class="product-badge">Best Seller</span>
+            <canvas class="card-preview-canvas" width="200" height="200" data-product="ceramic-mug" data-color="#FFFFFF"></canvas>
+          </div>
+          <div class="product-info">
+            <div class="product-category-name">Drinkware</div>
+            <h3 class="product-title">Artisan Ceramic Coffee Mug (11oz)</h3>
+            <p class="product-desc">Heavyweight stoneware ceramic with glossy kiln-fired glaze. Microwave and commercial dishwasher safe.</p>
+            <div class="product-features-list">
+              <span class="feature-tag">11oz Stoneware</span>
+              <span class="feature-tag">Kiln-Fired</span>
+              <span class="feature-tag">360° Wrap</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From</span>
+                <span class="amount">₹99 <small style="font-size:0.75rem; font-weight:500;">/ unit in bulk</small></span>
+              </div>
+              <button class="btn btn-sm btn-primary open-studio-trigger" data-product="ceramic-mug">
+                Customize →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Steel Tumbler -->
+        <div class="product-card" data-category="drinkware">
+          <div class="product-thumb">
+            <span class="product-badge">Insulated</span>
+            <canvas class="card-preview-canvas" width="200" height="200" data-product="steel-tumbler" data-color="#1E293B"></canvas>
+          </div>
+          <div class="product-info">
+            <div class="product-category-name">Drinkware</div>
+            <h3 class="product-title">Stainless Travel Tumbler (20oz)</h3>
+            <p class="product-desc">Double-wall vacuum insulated 18/8 kitchen-grade steel. Keeps drinks ice cold 24h or hot 8h with clear acrylic lid.</p>
+            <div class="product-features-list">
+              <span class="feature-tag">Laser Engraved</span>
+              <span class="feature-tag">Vacuum Seal</span>
+              <span class="feature-tag">20oz</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From</span>
+                <span class="amount">₹299 <small style="font-size:0.75rem; font-weight:500;">/ unit in bulk</small></span>
+              </div>
+              <button class="btn btn-sm btn-primary open-studio-trigger" data-product="steel-tumbler">
+                Customize →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Enamel Mug -->
+        <div class="product-card" data-category="drinkware">
+          <div class="product-thumb">
+            <span class="product-badge eco">Vintage Steel</span>
+            <canvas class="card-preview-canvas" width="200" height="200" data-product="enamel-mug" data-color="#FAF8F5"></canvas>
+          </div>
+          <div class="product-info">
+            <div class="product-category-name">Drinkware</div>
+            <h3 class="product-title">Campfire Speckled Enamel Mug</h3>
+            <p class="product-desc">Authentic steel core coated in organic porcelain enamel with hand-dipped contrast rolled steel rim.</p>
+            <div class="product-features-list">
+              <span class="feature-tag">Campfire Safe</span>
+              <span class="feature-tag">Speckled Finish</span>
+              <span class="feature-tag">12oz</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From</span>
+                <span class="amount">₹149 <small style="font-size:0.75rem; font-weight:500;">/ unit in bulk</small></span>
+              </div>
+              <button class="btn btn-sm btn-primary open-studio-trigger" data-product="enamel-mug">
+                Customize →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Dad Hat -->
+        <div class="product-card" data-category="headwear">
+          <div class="product-thumb">
+            <span class="product-badge">Best Seller</span>
+            <canvas class="card-preview-canvas" width="200" height="200" data-product="dad-hat" data-color="#E05A36"></canvas>
+          </div>
+          <div class="product-info">
+            <div class="product-category-name">Headwear</div>
+            <h3 class="product-title">Vintage Washed Cotton Dad Hat</h3>
+            <p class="product-desc">Unstructured low-profile 6-panel silhouette. 100% bio-washed chino cotton twill with antique brass buckle.</p>
+            <div class="product-features-list">
+              <span class="feature-tag">3D Puff Embroidery</span>
+              <span class="feature-tag">Bio-Washed</span>
+              <span class="feature-tag">Brass Buckle</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From</span>
+                <span class="amount">₹189 <small style="font-size:0.75rem; font-weight:500;">/ unit in bulk</small></span>
+              </div>
+              <button class="btn btn-sm btn-primary open-studio-trigger" data-product="dad-hat">
+                Customize →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Trucker Snapback -->
+        <div class="product-card" data-category="headwear">
+          <div class="product-thumb">
+            <span class="product-badge">Retro Mesh</span>
+            <canvas class="card-preview-canvas" width="200" height="200" data-product="trucker-cap" data-color="#FAF8F5"></canvas>
+          </div>
+          <div class="product-info">
+            <div class="product-category-name">Headwear</div>
+            <h3 class="product-title">Retro 5-Panel Trucker Snapback</h3>
+            <p class="product-desc">Structured high-crown foam front with ultra-breathable polyester mesh back and matching visor braid.</p>
+            <div class="product-features-list">
+              <span class="feature-tag">Embroidered Patch</span>
+              <span class="feature-tag">Breathable Mesh</span>
+              <span class="feature-tag">Snapback</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From</span>
+                <span class="amount">₹169 <small style="font-size:0.75rem; font-weight:500;">/ unit in bulk</small></span>
+              </div>
+              <button class="btn btn-sm btn-primary open-studio-trigger" data-product="trucker-cap">
+                Customize →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Ribbed Beanie -->
+        <div class="product-card" data-category="headwear">
+          <div class="product-thumb">
+            <span class="product-badge">Cozy Knit</span>
+            <canvas class="card-preview-canvas" width="200" height="200" data-product="knit-beanie" data-color="#334155"></canvas>
+          </div>
+          <div class="product-info">
+            <div class="product-category-name">Headwear</div>
+            <h3 class="product-title">Cuffed Fisherman Ribbed Beanie</h3>
+            <p class="product-desc">100% hypoallergenic soft acrylic ribbed knit. Snug ergonomic crown with 3-inch fold-over cuff for woven patches.</p>
+            <div class="product-features-list">
+              <span class="feature-tag">Woven Crest</span>
+              <span class="feature-tag">Fold-Over Cuff</span>
+              <span class="feature-tag">Stretch Fit</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="from">From</span>
+                <span class="amount">₹149 <small style="font-size:0.75rem; font-weight:500;">/ unit in bulk</small></span>
+              </div>
+              <button class="btn btn-sm btn-primary open-studio-trigger" data-product="knit-beanie">
+                Customize →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship Banner -->
+  <section class="craft-banner">
+    <div class="container">
+      <div class="craft-grid">
+        <div class="craft-card">
+          <div class="craft-icon">🧵</div>
+          <h3 class="craft-title">3D Raised Puff Stitch</h3>
+          <p class="craft-text">Precision Japanese Tajima embroidery heads delivering elevated 3D foam stitches up to 15,000 stitch density.</p>
+        </div>
+        <div class="craft-card">
+          <div class="craft-icon">🔥</div>
+          <h3 class="craft-title">Kiln-Fired Glaze</h3>
+          <p class="craft-text">Our ceramic inks fuse into the stoneware at 1,400°F. Never chips, scratches, or peels in dishwashers.</p>
+        </div>
+        <div class="craft-card">
+          <div class="craft-icon">⚡</div>
+          <h3 class="craft-title">Laser-Etched Finish</h3>
+          <p class="craft-text">Fiber laser etching cuts through powder coat to expose permanent surgical-grade bare stainless steel.</p>
+        </div>
+        <div class="craft-card">
+          <div class="craft-icon">📦</div>
+          <h3 class="craft-title">Free Preflight Proofing</h3>
+          <p class="craft-text">Every single order includes a calibrated digital 3D vector proof inspected by our master print technicians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instant Bulk Quote Calculator -->
+  <section id="calculator" class="calculator-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">INSTANT TRANSPARENT PRICING</span>
+        <h2 class="section-heading">Bulk Pricing & Tier Calculator</h2>
+        <p class="section-desc">Get transparent, volume-discounted quotes in seconds. Setup fees automatically waived on orders of 48+ units!</p>
+      </div>
+
+      <div class="calc-card-container">
+        <!-- Left: Inputs -->
+        <div class="calc-inputs-pane">
+          <div class="calc-group">
+            <label class="calc-label" for="calcProductSelect">Select Product Model</label>
+            <select id="calcProductSelect" class="calc-select">
+              <option value="ceramic-mug">Artisan Ceramic Mug (11oz) - Base ₹249</option>
+              <option value="steel-tumbler">Insulated Travel Tumbler (20oz) - Base ₹599</option>
+              <option value="enamel-mug">Campfire Speckled Enamel Mug - Base ₹349</option>
+              <option value="dad-hat" selected>Vintage Washed Cotton Dad Hat - Base ₹399</option>
+              <option value="trucker-cap">Retro 5-Panel Trucker Snapback - Base ₹349</option>
+              <option value="knit-beanie">Cuffed Fisherman Ribbed Beanie - Base ₹299</option>
+            </select>
+          </div>
+
+          <div class="calc-group">
+            <div class="calc-label">
+              <span>Order Quantity</span>
+              <span class="highlight" id="calcQtyDisplay">24 units</span>
+            </div>
+            <div class="range-slider-wrap">
+              <input type="range" id="calcQtySlider" min="1" max="500" value="24" step="1">
+              <div class="slider-ticks">
+                <span>1 (Sample)</span>
+                <span>12 (Boutique)</span>
+                <span>48 (Free Setup)</span>
+                <span>144 (Wholesale)</span>
+                <span>500+ (Enterprise)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">Decoration Method</label>
+            <div class="radio-pill-grid">
+              <div class="radio-pill">
+                <input type="radio" id="method1" name="calcMethod" value="3d-puff" checked>
+                <label for="method1">
+                  <strong>3D Raised Puff</strong>
+                  <span>+₹49/unit</span>
+                </label>
+              </div>
+              <div class="radio-pill">
+                <input type="radio" id="method2" name="calcMethod" value="flat-embroidery">
+                <label for="method2">
+                  <strong>Flat Thread</strong>
+                  <span>Standard</span>
+                </label>
+              </div>
+              <div class="radio-pill">
+                <input type="radio" id="method3" name="calcMethod" value="ceramic-glaze">
+                <label for="method3">
+                  <strong>Kiln Glaze</strong>
+                  <span>Standard</span>
+                </label>
+              </div>
+              <div class="radio-pill">
+                <input type="radio" id="method4" name="calcMethod" value="laser-etch">
+                <label for="method4">
+                  <strong>Laser Etch</strong>
+                  <span>+₹39/unit</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">Value-Add Upgrades</label>
+            <div class="addons-list">
+              <label class="addon-check-item">
+                <span>🎁 Individual Retail Presentation Box (+₹35/ea)</span>
+                <input type="checkbox" id="calcPackagingCheck">
+              </label>
+              <label class="addon-check-item">
+                <span>🏷️ Custom Inside Woven Brand Tag (+₹25/ea)</span>
+                <input type="checkbox" id="calcLabelCheck">
+              </label>
+              <label class="addon-check-item">
+                <span>⚡ Express 48-Hour Rush Production (+15%)</span>
+                <input type="checkbox" id="calcRushCheck">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real-time Summary Card -->
+        <div class="calc-summary-pane">
+          <div>
+            <div class="summary-title">
+              <span>Instant Estimate (INR)</span>
+              <span class="summary-savings-badge" id="calcSavingsBadge">Save ₹1,440.00 (15% OFF)</span>
+            </div>
+
+            <div class="unit-price-display">
+              <div class="u-label">Estimated Unit Price</div>
+              <div class="u-amount" id="calcUnitPrice">₹388.15</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;" id="calcTierBadge">Boutique Batch</div>
+            </div>
+
+            <div class="summary-row">
+              <span>Setup & Preflight Fee:</span>
+              <strong id="calcSetupFee">₹499.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Standard Production:</span>
+              <span>5 Business Days</span>
+            </div>
+            <div class="summary-row">
+              <span>GST Input Credit Invoice:</span>
+              <span style="color: #16A34A; font-weight: 700;">Included (18%)</span>
+            </div>
+            <div class="summary-row total-row">
+              <span>Estimated Subtotal:</span>
+              <span id="calcSubtotal">₹9,814.60</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button class="btn btn-primary btn-lg open-studio-trigger" data-product="dad-hat" style="width: 100%;">
+              ✨ Load into Live Studio
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Templates & Lookbook Section -->
+  <section id="templates" class="section-wrapper">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">PRE-MADE BRAND KITS</span>
+        <h2 class="section-heading">Curated Drinkware & Headwear Lookbook</h2>
+        <p class="section-desc">Jump-start your branding with pre-built typography curves, heritage emblems, and harmonious colorways.</p>
+      </div>
+
+      <div class="templates-grid" id="templatesGrid">
+        <!-- Rendered dynamically by templates.js & app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Sample Kit Callout -->
+  <section id="sample-kit" class="section-wrapper" style="padding-top: 0;">
+    <div class="container">
+      <div class="sample-banner-box">
+        <div class="sample-content">
+          <h3>Touch the Craftsmanship First</h3>
+          <p>Order our curated physical sample kit containing 1x Kiln-Glazed Ceramic Mug, 1x Vintage Dad Hat with 3D Puff Embroidery, thread color chart, and metal finish swatches.</p>
+          <div class="sample-perks">
+            <div class="perk-item">✓ Includes 100% Rebate Coupon</div>
+            <div class="perk-item">✓ 2-Day Priority Dispatch</div>
+            <div class="perk-item">✓ Real Physical Swatches</div>
+          </div>
+          <button class="btn btn-primary btn-lg" id="sampleKitBtn">
+            📦 Order ₹199 Sample Box (100% Rebated on Order)
+          </button>
+        </div>
+        <div style="text-align: center; font-size: 5rem;">
+          ☕ 🧢
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3D/2D Studio Modal -->
+  <div class="modal-backdrop" id="studioModal">
+    <div class="studio-modal-container">
+      <!-- Studio Topbar -->
+      <div class="studio-topbar">
+        <div class="studio-title">
+          <span>🎨 Cups & Caps Live Studio</span>
+          <select id="studioProductSelect" class="calc-select" style="width: auto; padding: 6px 12px; margin-left: 12px; font-size: 0.85rem;">
+            <option value="ceramic-mug">Ceramic Mug (11oz)</option>
+            <option value="steel-tumbler">Insulated Tumbler (20oz)</option>
+            <option value="enamel-mug">Enamel Campfire Mug</option>
+            <option value="dad-hat" selected>Vintage Dad Hat</option>
+            <option value="trucker-cap">Retro Trucker Snapback</option>
+            <option value="knit-beanie">Fisherman Beanie</option>
+          </select>
+        </div>
+        <button class="close-modal-btn" id="closeStudioBtn" aria-label="Close Studio">✕</button>
+      </div>
+
+      <!-- Studio 3-Column Workspace -->
+      <div class="studio-workspace-grid">
+        <!-- Left: Tool Tabs & Controls -->
+        <div class="studio-tools-pane">
+          <div class="tool-tab-headers">
+            <div class="tool-tab-btn active" data-panel="panelText">Typography</div>
+            <div class="tool-tab-btn" data-panel="panelBadges">Emblems</div>
+            <div class="tool-tab-btn" data-panel="panelUpload">Upload</div>
+          </div>
+
+          <!-- Panel 1: Typography -->
+          <div class="tool-panel" id="panelText">
+            <div>
+              <label class="calc-label">Custom Text</label>
+              <input type="text" id="studioTextInput" class="calc-input" value="PACIFIC CREST CLUB" placeholder="Enter brand name...">
+            </div>
+
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <input type="checkbox" id="curveTextCheck" style="width: 18px; height: 18px; accent-color: var(--primary);">
+              <label for="curveTextCheck" style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">
+                Curve / Arch Text (Crucial for caps & mugs)
+              </label>
+            </div>
+
+            <div>
+              <label class="calc-label">Font Family</label>
+              <select id="fontFamilySelect" class="calc-select">
+                <option value="Outfit" selected>Outfit (Modern Clean)</option>
+                <option value="Playfair Display">Playfair Display (Luxury Serif)</option>
+                <option value="Space Grotesk">Space Grotesk (Athletic Tech)</option>
+                <option value="Plus Jakarta Sans">Plus Jakarta (Editorial)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="calc-label">Thread / Print Color</label>
+              <div class="color-swatch-grid">
+                <div class="color-swatch print-color-swatch active" style="background: #111827;" data-color="#111827" title="Espresso Charcoal"></div>
+                <div class="color-swatch print-color-swatch" style="background: #FFFFFF;" data-color="#FFFFFF" title="Porcelain White"></div>
+                <div class="color-swatch print-color-swatch" style="background: #E05A36;" data-color="#E05A36" title="Artisanal Terracotta"></div>
+                <div class="color-swatch print-color-swatch" style="background: #D97706;" data-color="#D97706" title="Golden Honey"></div>
+                <div class="color-swatch print-color-swatch" style="background: #0D9488;" data-color="#0D9488" title="Forest Eucalyptus"></div>
+                <div class="color-swatch print-color-swatch" style="background: #2563EB;" data-color="#2563EB" title="Cobalt Indigo"></div>
+              </div>
+            </div>
+
+            <button class="btn btn-secondary btn-sm" id="addTextBtn">
+              + Add Another Text Layer
+            </button>
+            <button class="btn btn-outline btn-sm" id="deleteSelectedBtn" style="color: #DC2626; border-color: #FCA5A5;">
+              🗑️ Delete Selected Layer
+            </button>
+          </div>
+
+          <!-- Panel 2: Emblems -->
+          <div class="tool-panel" id="panelBadges" style="display: none;">
+            <label class="calc-label">Choose Heritage Emblem</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <button class="btn btn-secondary btn-sm add-badge-btn" data-badge="coffee">☕ Coffee Cup</button>
+              <button class="btn btn-secondary btn-sm add-badge-btn" data-badge="mountain">⛰️ Mountain Peak</button>
+              <button class="btn btn-secondary btn-sm add-badge-btn" data-badge="athletic">🛡️ Athletic Shield</button>
+              <button class="btn btn-secondary btn-sm add-badge-btn" data-badge="botanical">🌿 Botanical Wreath</button>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 10px;">
+              Click any emblem to add it directly into your design. Drag on canvas to reposition.
+            </p>
+          </div>
+
+          <!-- Panel 3: Upload -->
+          <div class="tool-panel" id="panelUpload" style="display: none;">
+            <label class="calc-label">Upload Vector / Logo</label>
+            <input type="file" id="logoUploadInput" accept="image/*" class="calc-input">
+            <p style="font-size: 0.78rem; color: var(--text-muted);">
+              Recommended: Transparent PNG or SVG with minimum 1000px resolution for crisp embroidery or kiln glaze.
+            </p>
+          </div>
+        </div>
+
+        <!-- Center: Interactive Mockup Canvas Stage -->
+        <div class="studio-canvas-stage">
+          <div class="stage-angle-controls">
+            <button class="angle-btn active" data-angle="front">Front View</button>
+            <button class="angle-btn" data-angle="left">Left Angle</button>
+            <button class="angle-btn" data-angle="right">Right Angle</button>
+            <button class="angle-btn" data-angle="back">Back View</button>
+          </div>
+
+          <div class="canvas-mockup-wrapper">
+            <canvas id="studioMockupCanvas" width="600" height="420"></canvas>
+            <!-- Offscreen buffer for flat design editing -->
+            <canvas id="studioDesignBuffer" width="360" height="240"></canvas>
+          </div>
+        </div>
+
+        <!-- Right: Product Color, Finishes & Actions -->
+        <div class="studio-properties-pane">
+          <div>
+            <label class="calc-label">Product Base Color</label>
+            <div class="color-swatch-grid" id="studioColorSwatches">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <div>
+            <label class="calc-label">Decoration Finish</label>
+            <div class="finish-card-list" id="finishListContainer">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-light); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; margin-top: auto;">
+            <button class="btn btn-secondary" id="exportProofBtn" style="width: 100%;">
+              📥 Download Vector Proof (PNG)
+            </button>
+            <button class="btn btn-primary btn-lg" id="studioAddToCartBtn" style="width: 100%;">
+              🛒 Add Batch to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay">
+    <div class="cart-drawer">
+      <div class="cart-drawer-head">
+        <h3>Your Custom Bag</h3>
+        <button class="close-modal-btn" id="closeCartBtn" aria-label="Close Cart">✕</button>
+      </div>
+
+      <div class="cart-items-body" id="cartItemsList">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="cart-drawer-foot">
+        <div class="coupon-row">
+          <input type="text" id="cartCouponInput" class="coupon-input" placeholder="Promo code (LIGHT15)">
+          <button class="btn btn-secondary btn-sm" id="applyCouponBtn">Apply</button>
+        </div>
+
+        <div class="summary-row" id="cartDiscountRow" style="display: none; color: #16A34A; font-weight: 700;">
+          <span>Light Theme Promo (15% OFF):</span>
+          <span id="cartDiscountAmount">-₹0.00</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <strong id="cartSubtotalAmount">₹0.00</strong>
+        </div>
+
+        <div class="summary-row total-row">
+          <span>Order Total:</span>
+          <strong id="cartTotalAmount">₹0.00</strong>
+        </div>
+
+        <button class="btn btn-primary btn-lg" id="checkoutBtn" style="width: 100%; margin-top: 16px;">
+          Proceed to Production Checkout →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Hub -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/logo.png" alt="Cups & Caps Logo">
+            <div class="brand-text">
+              <div class="brand-title">Cups & Caps <span>Design</span></div>
+              <div class="brand-subtitle">Turning Everyday Moments into Timeless Keepsakes. ☕🧢</div>
+            </div>
+          </div>
+          <p>The dedicated studio for bespoke drinkware and retail-grade custom headwear. "Turning Everyday Moments into Timeless Keepsakes. ☕🧢"</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Custom Drinkware</h4>
+          <ul>
+            <li><a href="#catalog">Artisan Ceramic Mugs</a></li>
+            <li><a href="#catalog">Insulated Steel Tumblers</a></li>
+            <li><a href="#catalog">Campfire Enamel Mugs</a></li>
+            <li><a href="#catalog">Boba Glass Cans</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Custom Headwear</h4>
+          <ul>
+            <li><a href="#catalog">Vintage Washed Dad Hats</a></li>
+            <li><a href="#catalog">Retro Mesh Trucker Caps</a></li>
+            <li><a href="#catalog">3D Puff Snapbacks</a></li>
+            <li><a href="#catalog">Fisherman Ribbed Beanies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio & Proofing</h4>
+          <ul>
+            <li><a href="#studio" class="open-studio-trigger" data-product="dad-hat">Interactive 3D Studio</a></li>
+            <li><a href="#calculator">Instant Bulk Quote</a></li>
+            <li><a href="#templates">Brand Lookbook</a></li>
+            <li><a href="#sample-kit">Order Sample Kit</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Cups & Caps Design. Handcrafted with pride in India. All rights reserved. GST Invoicing Available.</div>
+        <div>Pan-India Express Dispatch: Mumbai • Bengaluru • Delhi NCR • Hyderabad • Pune • 19,000+ PIN Codes</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
