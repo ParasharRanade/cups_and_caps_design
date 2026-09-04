@@ -411,6 +411,38 @@ class CupsAndCapsApp {
       });
     }
 
+    // Logo Kit Modal Controls
+    const logoKitModal = document.getElementById('logoKitModal');
+    const openLogoKitBtn = document.getElementById('openLogoKitBtn');
+    const closeLogoKitBtn = document.getElementById('closeLogoKitBtn');
+    const closeLogoKitFooterBtn = document.getElementById('closeLogoKitFooterBtn');
+
+    if (openLogoKitBtn && logoKitModal) {
+      openLogoKitBtn.addEventListener('click', () => {
+        logoKitModal.classList.add('active');
+      });
+    }
+
+    if (closeLogoKitBtn && logoKitModal) {
+      closeLogoKitBtn.addEventListener('click', () => {
+        logoKitModal.classList.remove('active');
+      });
+    }
+
+    if (closeLogoKitFooterBtn && logoKitModal) {
+      closeLogoKitFooterBtn.addEventListener('click', () => {
+        logoKitModal.classList.remove('active');
+      });
+    }
+
+    if (logoKitModal) {
+      logoKitModal.addEventListener('click', (e) => {
+        if (e.target === logoKitModal) {
+          logoKitModal.classList.remove('active');
+        }
+      });
+    }
+
     // Studio Product Select Switcher
     const studioProdSelect = document.getElementById('studioProductSelect');
     if (studioProdSelect) {

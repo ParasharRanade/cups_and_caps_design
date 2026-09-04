@@ -19,8 +19,8 @@
   <!-- Main Sticky Header -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#" class="brand-logo">
-        <img src="assets/logo.png" alt="Cups & Caps Logo">
+      <a href="#" class="brand-logo" title="Cups & Caps Design - Home">
+        <img src="assets/cups_and_caps_mark_transparent.png" alt="Cups & Caps Emblem Logo">
         <div class="brand-text">
           <div class="brand-title">Cups & Caps <span>Design</span></div>
           <div class="brand-subtitle">Turning Everyday Moments into Timeless Keepsakes. ☕🧢</div>
@@ -38,6 +38,9 @@
       </nav>
 
       <div class="header-actions">
+        <button class="btn btn-outline logo-kit-trigger" id="openLogoKitBtn" title="Download Official High-Resolution Logo Kit (PNG, SVG, Vector)">
+          📥 Download Logo
+        </button>
         <button class="btn btn-primary open-studio-trigger" data-product="dad-hat">
           ✨ Open Studio
         </button>
@@ -695,13 +698,22 @@
       <div class="footer-top-grid">
         <div class="footer-brand">
           <div class="brand-logo">
-            <img src="assets/logo.png" alt="Cups & Caps Logo">
+            <img src="assets/cups_and_caps_logo_transparent.png" alt="Cups & Caps Logo">
             <div class="brand-text">
               <div class="brand-title">Cups & Caps <span>Design</span></div>
               <div class="brand-subtitle">Turning Everyday Moments into Timeless Keepsakes. ☕🧢</div>
             </div>
           </div>
           <p>The dedicated studio for bespoke drinkware and retail-grade custom headwear. "Turning Everyday Moments into Timeless Keepsakes. ☕🧢"</p>
+          <div class="brand-asset-downloads">
+            <div class="asset-title">📥 Download Official Logo & Assets:</div>
+            <div class="asset-chips-wrap">
+              <a href="assets/cups_and_caps_logo_transparent.png" download="cups_and_caps_logo_transparent.png" class="asset-chip" title="Download Transparent PNG">🖼️ PNG Transparent</a>
+              <a href="assets/cups_and_caps_logo.svg" download="cups_and_caps_logo.svg" class="asset-chip" title="Download Vector SVG">📐 Vector SVG</a>
+              <a href="assets/cups_and_caps_logo_highres.png" download="cups_and_caps_logo_highres.png" class="asset-chip" title="Download 2K Master PNG">✨ 2K Master</a>
+              <a href="assets/cups_and_caps_mark_transparent.png" download="cups_and_caps_mark_transparent.png" class="asset-chip" title="Download Mark Icon">☕ Mark Icon</a>
+            </div>
+          </div>
         </div>
 
         <div class="footer-col">
@@ -741,6 +753,67 @@
       </div>
     </div>
   </footer>
+
+  <!-- Official Logo & Brand Assets Download Modal -->
+  <div class="modal-backdrop" id="logoKitModal">
+    <div class="modal-dialog" style="max-width: 680px;">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h3 class="modal-title">Official Brand Logo & Vector Kit</h3>
+          <p class="modal-subtitle">Download high-definition assets for digital, embroidery, print & merchandise</p>
+        </div>
+        <button class="modal-close-btn" id="closeLogoKitBtn" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding: 24px;">
+        <div class="modal-logo-preview">
+          <img src="assets/cups_and_caps_logo_transparent.png" alt="Cups & Caps Design Full Logo" id="logoPreviewImg">
+          <div style="margin-top: 12px; font-size: 0.78rem; font-weight: 600; color: var(--text-muted);">
+            Transparent Canvas Preview • 300 DPI High-Definition Asset
+          </div>
+        </div>
+
+        <div class="logo-formats-grid">
+          <div class="logo-format-card">
+            <h5>Vector SVG <span>📐</span></h5>
+            <p>Infinite scalability for signage, large banners, vector embroidery & Figma/Illustrator.</p>
+            <a href="assets/cups_and_caps_logo.svg" download="cups_and_caps_logo.svg" class="btn btn-primary btn-sm">
+              📥 Download .SVG
+            </a>
+          </div>
+
+          <div class="logo-format-card">
+            <h5>Transparent PNG <span>🖼️</span></h5>
+            <p>Lossless transparent RGBA cut-out ideal for overlays, web headers, slides & mockups.</p>
+            <a href="assets/cups_and_caps_logo_transparent.png" download="cups_and_caps_logo_transparent.png" class="btn btn-outline btn-sm">
+              📥 Download .PNG
+            </a>
+          </div>
+
+          <div class="logo-format-card">
+            <h5>2K Master PNG <span>✨</span></h5>
+            <p>Ultra-high resolution 2048px master graphic for commercial print & catalog publishing.</p>
+            <a href="assets/cups_and_caps_logo_highres.png" download="cups_and_caps_logo_highres.png" class="btn btn-outline btn-sm">
+              📥 Download 2K PNG
+            </a>
+          </div>
+
+          <div class="logo-format-card">
+            <h5>Emblem / Mark Icon <span>☕</span></h5>
+            <p>Standalone cup & cap brim icon with transparent background for avatars & favicons.</p>
+            <a href="assets/cups_and_caps_mark_transparent.png" download="cups_and_caps_mark_transparent.png" class="btn btn-outline btn-sm">
+              📥 Download Mark
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Format: sRGB IEC61966-2.1 • 300 DPI density</span>
+        <button class="btn btn-outline btn-sm" id="closeLogoKitFooterBtn">Close</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Application Script (ES Module) -->
   <script type="module" src="js/app.js"></script>
